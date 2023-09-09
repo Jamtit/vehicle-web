@@ -6,6 +6,7 @@ import {
   Menu,
   MenuItem,
   Button,
+  Tooltip,
 } from "@mui/material";
 import ListTwoToneIcon from "@mui/icons-material/ListTwoTone";
 import { useState } from "react";
@@ -28,9 +29,11 @@ export default function Navbar() {
   return (
     <AppBar>
       <Toolbar sx={{ justifyContent: "start" }}>
-        <IconButton onClick={handleClick}>
-          <ListTwoToneIcon />
-        </IconButton>
+        <Tooltip title="Menu">
+          <IconButton onClick={handleClick}>
+            <ListTwoToneIcon />
+          </IconButton>
+        </Tooltip>
         <Menu open={open} onClose={handleClose} anchorEl={anchorElement}>
           <MenuItem>
             <Link to={"/about"}>About</Link>
