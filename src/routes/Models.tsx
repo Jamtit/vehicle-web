@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import Axios from "axios";
 import ModelCard from "../components/ModelCard";
-import { Box, Button, TextField } from "@mui/material";
+import { Box, Button, TextField, CircularProgress } from "@mui/material";
 import { useState } from "react";
 
 export default function Models() {
@@ -24,7 +24,12 @@ export default function Models() {
   );
 
   if (isLoading) {
-    return <h1>Loading...</h1>;
+    return (
+      <>
+        <CircularProgress />
+        <h3>Loading</h3>
+      </>
+    );
   }
 
   const handleRefetchingNewBrand = () => {
