@@ -6,8 +6,21 @@ import ErrorPage from "./routes/ErrorPage";
 import Home from "./routes/Home";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { createTheme, ThemeProvider, CssBaseline, Paper } from "@mui/material";
+import { createContext, useState } from "react";
 
+interface DarkThemeContext {
+  mode: boolean;
+  toggleDarkMode?: () => void;
+}
+
+export const DarkModeContext = createContext<DarkThemeContext>({ mode: false });
 function App() {
+  const [darkMode, setDarkMode] = useState(false);
+  const toggleMode = () => {
+    setDarkMode(!darkMode);
+  };
+
   const router = createBrowserRouter([
     {
       path: "/",
@@ -37,13 +50,49 @@ function App() {
       },
     },
   });
+
+  const lightTheme = createTheme({
+    palette: {
+      mode: "light",
+      primary: {
+        main: "#8a281c",
+        light: "#874139",
+        dark: "#661e15",
+      },
+      divider: "#8a281c",
+    },
+  });
+
+  const darkTheme = createTheme({
+    palette: {
+      mode: "dark",
+      primary: {
+        main: "#a30000",
+        light: "#962424",
+        dark: "#7a0101",
+      },
+      background: {
+        default: "#212020",
+        paper: "#400404",
+      },
+      divider: "#a30000",
+    },
+  });
+
   return (
     <>
-      <QueryClientProvider client={client}>
-        <div>
-          <RouterProvider router={router} />
-        </div>
-      </QueryClientProvider>
+      <DarkModeContext.Provider
+        value={{ mode: darkMode, toggleDarkMode: toggleMode }}
+      >
+        <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
+          <CssBaseline />
+          <QueryClientProvider client={client}>
+            <Paper>
+              <RouterProvider router={router} />
+            </Paper>
+          </QueryClientProvider>
+        </ThemeProvider>
+      </DarkModeContext.Provider>
     </>
   );
 }

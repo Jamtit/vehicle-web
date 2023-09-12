@@ -5,7 +5,7 @@ import { Box, Button, TextField } from "@mui/material";
 import { useState } from "react";
 
 export default function Models() {
-  const [model, setModel] = useState<string | null>("toyota");
+  const [model, setModel] = useState<string | null>(null);
   const options = {
     method: "GET",
     url: `https://api.api-ninjas.com/v1/cars?limit=10&make=` + model,
@@ -40,19 +40,23 @@ export default function Models() {
         onChange={(event) => setModel(event.target.value)}
       />
       <Button onClick={handleRefetchingNewBrand}>Search</Button>
-      <Box sx={{ display: "flex", flexDirection: "row" }}>
-        {brands.map(
-          (index: {
-            model: string;
-            year: string;
-            brandName: string | null;
-          }) => (
-            <ModelCard
-              model={index.model}
-              madeYear={index.year}
-              brandName={model}
-            />
-          )
+      <Box>
+        {model && (
+          <Box sx={{ display: "flex", flexDirection: "row" }}>
+            {brands.map(
+              (index: {
+                model: string;
+                year: string;
+                brandName: string | null;
+              }) => (
+                <ModelCard
+                  model={index.model}
+                  madeYear={index.year}
+                  brandName={model}
+                />
+              )
+            )}
+          </Box>
         )}
       </Box>
     </>

@@ -7,10 +7,15 @@ import {
   MenuItem,
   Button,
   Tooltip,
+  Divider,
 } from "@mui/material";
 import ListTwoToneIcon from "@mui/icons-material/ListTwoTone";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import LightIcon from "@mui/icons-material/Light";
+import NightlightRoundIcon from "@mui/icons-material/NightlightRound";
+import { DarkModeContext } from "../App";
+
 export default function Navbar() {
   const [anchorElement, setAnchorElement] = useState<null | HTMLElement>(null);
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
@@ -26,9 +31,11 @@ export default function Navbar() {
     navigate("/");
   };
 
+  const { mode, toggleDarkMode } = useContext(DarkModeContext);
+
   return (
     <AppBar>
-      <Toolbar sx={{ justifyContent: "start" }}>
+      <Toolbar sx={{ justifyContent: "space-between" }}>
         <Tooltip title="Menu">
           <IconButton onClick={handleClick}>
             <ListTwoToneIcon />
@@ -36,22 +43,35 @@ export default function Navbar() {
         </Tooltip>
         <Menu open={open} onClose={handleClose} anchorEl={anchorElement}>
           <MenuItem>
-            <Link to={"/about"}>About</Link>
+            <Link
+              style={{ color: `${mode ? "white" : "black"}` }}
+              to={"/about"}
+            >
+              About
+            </Link>
           </MenuItem>
+          <Divider />
           <MenuItem>
-            <Link to={"/models"}>Models</Link>
+            <Link
+              style={{ color: `${mode ? "white" : "black"}` }}
+              to={"/models"}
+            >
+              Models
+            </Link>
           </MenuItem>
         </Menu>
-        <Button
-          onClick={handleLogoClick}
-          sx={{ position: "relative", left: "765px" }}
-        >
+        <Button onClick={handleLogoClick}>
           <img
             className="logo-icon"
-            src="../../public/4WHEELSKNEELS(LIGHT).png"
+            src="/4WHEELSKNEELS(LIGHT).png"
             alt="logo"
           />
         </Button>
+        <Tooltip title="Toggle mode">
+          <IconButton onClick={toggleDarkMode}>
+            {mode ? <NightlightRoundIcon /> : <LightIcon />}
+          </IconButton>
+        </Tooltip>
       </Toolbar>
     </AppBar>
   );
