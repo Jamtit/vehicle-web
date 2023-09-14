@@ -69,7 +69,7 @@ export default function Navbar() {
         </Button>
         <Tooltip title="Toggle mode">
           <IconButton onClick={toggleDarkMode}>
-            {mode ? <NightlightRoundIcon /> : <LightIcon />}
+            {mode ? <LightIcon /> : <NightlightRoundIcon />}
           </IconButton>
         </Tooltip>
       </Toolbar>

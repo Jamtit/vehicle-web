@@ -1,6 +1,7 @@
-import { Paper } from "@mui/material";
+import { Paper, Typography, Box } from "@mui/material";
 import { useContext } from "react";
 import { DarkModeContext } from "../App";
+import logos from "../symbols.json";
 
 interface Model {
   brandName: string | null;
@@ -13,11 +14,23 @@ export default function ModelCard(props: Model) {
 
   return (
     <Paper
-      sx={{ mr: 3, p: 3, backgroundColor: `${mode ? "black" : "lightgray"}` }}
+      sx={{
+        mr: 5,
+        p: 3,
+        backgroundColor: `${mode ? "background.default" : "primary.main"}`,
+        width: "300px",
+        color: "white",
+      }}
     >
-      <h1>Brand: {props.brandName}</h1>
-      <h2>Model: {props.model}</h2>
-      <h2>Year made: {props.madeYear}</h2>
+      <Box
+        component="img"
+        src={logos[props.brandName?.toLocaleLowerCase() as keyof typeof logos]}
+        alt="brand-logo"
+        sx={{ maxWidth: "120px", maxHeight: "120px", mb: 2 }}
+      />
+      <Typography>Brand: {props.brandName?.toLocaleUpperCase()}</Typography>
+      <Typography>Model: {props.model.toLocaleUpperCase()}</Typography>
+      <Typography>Year made: {props.madeYear}</Typography>
     </Paper>
   );
 }

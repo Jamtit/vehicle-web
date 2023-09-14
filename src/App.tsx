@@ -6,7 +6,13 @@ import ErrorPage from "./routes/ErrorPage";
 import Home from "./routes/Home";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { createTheme, ThemeProvider, CssBaseline, Paper } from "@mui/material";
+import {
+  createTheme,
+  ThemeProvider,
+  CssBaseline,
+  Paper,
+  Container,
+} from "@mui/material";
 import { createContext, useState } from "react";
 
 interface DarkThemeContext {
@@ -80,7 +86,7 @@ function App() {
   });
 
   return (
-    <>
+    <Container>
       <DarkModeContext.Provider
         value={{ mode: darkMode, toggleDarkMode: toggleMode }}
       >
@@ -93,7 +99,7 @@ function App() {
           </QueryClientProvider>
         </ThemeProvider>
       </DarkModeContext.Provider>
-    </>
+    </Container>
   );
 }
 

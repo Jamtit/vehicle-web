@@ -5,9 +5,9 @@ export function Root(): JSX.Element {
   return (
     <>
       <Navbar />
-      <div>
+      <>
         <Outlet />
-      </div>
+      </>
     </>
   );
 }
