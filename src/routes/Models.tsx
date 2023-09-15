@@ -7,6 +7,8 @@ import {
   TextField,
   CircularProgress,
   Container,
+  Typography,
+  Divider,
 } from "@mui/material";
 import { useState } from "react";
 
@@ -36,10 +38,10 @@ export default function Models() {
 
   if (isLoading) {
     return (
-      <>
+      <Box>
         <CircularProgress />
         <h3>Loading</h3>
-      </>
+      </Box>
     );
   }
 
@@ -49,7 +51,10 @@ export default function Models() {
 
   return (
     <Container sx={{ width: "100%", mt: 15, pb: 3, pt: 2 }}>
-      <h1>Models</h1>
+      <Typography variant="h3" sx={{ pb: 1 }}>
+        Models
+      </Typography>
+      <Divider sx={{ marginBlock: 2 }} />
       <Box sx={{ display: "flex", justifyContent: "center" }}>
         <TextField
           label="Brand"

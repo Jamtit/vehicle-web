@@ -15,6 +15,8 @@ import { useNavigate } from "react-router-dom";
 import LightIcon from "@mui/icons-material/Light";
 import NightlightRoundIcon from "@mui/icons-material/NightlightRound";
 import { DarkModeContext } from "../App";
+import DirectionsCarFilledRoundedIcon from "@mui/icons-material/DirectionsCarFilledRounded";
+import AutoStoriesIcon from "@mui/icons-material/AutoStories";
 
 export default function Navbar() {
   const [anchorElement, setAnchorElement] = useState<null | HTMLElement>(null);
@@ -44,19 +46,29 @@ export default function Navbar() {
         <Menu open={open} onClose={handleClose} anchorEl={anchorElement}>
           <MenuItem>
             <Link
-              style={{ color: `${mode ? "white" : "black"}` }}
+              style={{
+                color: `${mode ? "white" : "black"}`,
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
               to={"/about"}
             >
-              About
+              About <AutoStoriesIcon sx={{ ml: 2.7 }} />
             </Link>
           </MenuItem>
           <Divider />
           <MenuItem>
             <Link
-              style={{ color: `${mode ? "white" : "black"}` }}
+              style={{
+                color: `${mode ? "white" : "black"}`,
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
               to={"/models"}
             >
-              Models
+              Models <DirectionsCarFilledRoundedIcon sx={{ ml: 1.5 }} />
             </Link>
           </MenuItem>
         </Menu>
