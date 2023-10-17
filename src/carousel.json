@@ -1,0 +1,28 @@
+{
+    "data":[
+        {
+            "id": "1",
+            "imageURL": "https://cdn.jdpower.com/Average%20Weight%20Of%20A%20Car.jpg"
+        },
+        {
+            "id": "2",
+            "imageURL": "https://d1gymyavdvyjgt.cloudfront.net/drive/images/uploads/headers/ws_cropper/1_0x0_790x520_0x520_fastest-electric-cars-2022-rimac-nevera.jpg"
+        },
+        {
+            "id": "3",
+            "imageURL": "https://www.thedrive.com/uploads/2022/12/27/IMG_0793.jpg?auto=webp&crop=16%3A9&auto=webp&optimize=high&quality=70&width=1440"
+        },
+        {
+            "id": "4",
+            "imageURL": "https://ev-database.org/img/auto/Lotus_Eletre/Lotus_Eletre-01@2x.jpg"
+        },
+        {
+            "id": "5",
+            "imageURL": "https://www.autocar.co.uk/sites/autocar.co.uk/files/images/car-reviews/first-drives/legacy/alfa-romeo-giulia-quadrifoglio-100years-review-01-tracking-front.jpg"
+        },
+        {
+            "id": "6",
+            "imageURL": "https://claveyscorner.com/wp-content/uploads/2023/01/2023-Volvo-S60-Top-Shot.jpg"
+        }
+    ]
+}

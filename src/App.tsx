@@ -79,7 +79,6 @@ function App() {
       },
       background: {
         default: "#212020",
-        paper: "#400404",
       },
       divider: "#a30000",
     },
@@ -93,7 +92,13 @@ function App() {
         <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
           <CssBaseline />
           <QueryClientProvider client={client}>
-            <Paper>
+            <Paper
+              sx={{
+                backgroundColor: "transparent",
+                boxShadow: "none",
+                background: "none",
+              }}
+            >
               <RouterProvider router={router} />
             </Paper>
           </QueryClientProvider>

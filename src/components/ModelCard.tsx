@@ -4,6 +4,7 @@ import { DarkModeContext } from "../App";
 import logos from "../symbols.json";
 
 interface Model {
+  id: number;
   brandName: string | null;
   model: string;
   madeYear: string;
