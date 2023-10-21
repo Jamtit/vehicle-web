@@ -28,7 +28,7 @@ export default function About() {
           <Typography sx={{ marginBlock: "20px" }}>Hi There!</Typography>
           <Typography>
             A brand new website, called Wheels 4 Kneels, allows you to choose a
-            model of your liking and receive a "just enough" information about
+            model of your liking and receive "just enough" information about
             your selection.
           </Typography>
           <Typography>

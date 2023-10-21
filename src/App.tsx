@@ -85,7 +85,7 @@ function App() {
   });
 
   return (
-    <Container>
+    <Container sx={{ width: "100vw" }}>
       <DarkModeContext.Provider
         value={{ mode: darkMode, toggleDarkMode: toggleMode }}
       >

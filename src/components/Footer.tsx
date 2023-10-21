@@ -1,11 +1,19 @@
-import { BottomNavigation, Typography } from "@mui/material";
+import { Typography, AppBar } from "@mui/material";
 
 export default function Footer() {
   return (
-    <BottomNavigation>
-      <Typography sx={{ color: "black" }}>
+    <AppBar
+      sx={{
+        top: "auto",
+        bottom: 0,
+        height: "50px",
+        textAlign: "center",
+        justifyContent: "center",
+      }}
+    >
+      <Typography>
         <span>&#169;</span> Wheels 4 Kneels
       </Typography>
-    </BottomNavigation>
+    </AppBar>
   );
 }
