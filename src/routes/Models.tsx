@@ -89,6 +89,7 @@ export default function Models() {
               rowGap: "20px",
               justifyContent: "center",
               mt: "30px",
+              mb: "60px",
             }}
           >
             {brands.map(

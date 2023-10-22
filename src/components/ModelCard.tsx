@@ -27,11 +27,15 @@ export default function ModelCard(props: Model) {
         component="img"
         src={logos[props.brandName?.toLocaleLowerCase() as keyof typeof logos]}
         alt="brand-logo"
-        sx={{ maxWidth: "120px", maxHeight: "120px", mb: 2 }}
+        sx={{
+          maxWidth: "120px",
+          maxHeight: "120px",
+          mb: 2,
+        }}
       />
       <Typography>Brand: {props.brandName?.toLocaleUpperCase()}</Typography>
       <Typography>Model: {props.model.toLocaleUpperCase()}</Typography>
-      <Typography>Year made: {props.madeYear}</Typography>
+      <Typography>Year: {props.madeYear}</Typography>
     </Paper>
   );
 }
