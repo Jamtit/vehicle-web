@@ -27,6 +27,6 @@ There are only _three steps_ needed
 - When the page will be loaded, type in your desired vehicle brand name - see the results of your search. _NOTE_ - only 15 first result will be shown.
 - If needed, you can also select the _year_ the vehicle was made for more accurate search.
 
-* TODO
+## TODO
 
 - Make the Error Page more interactive (colour changes on different modes, error message, button to get back to the home page...etc).
