@@ -44,54 +44,48 @@ export default function Models() {
   };
 
   return (
-    <Container sx={{ width: "100%", mt: 15, pb: 3, pt: 2 }}>
-      <Typography variant="h3" sx={{ pb: 1 }}>
+    <Container className="models">
+      <Typography className="models_name" variant="h3">
         Models
       </Typography>
-      <Divider sx={{ marginBlock: 3 }} />
-      <Box sx={{ display: "flex", justifyContent: "center" }}>
+      <Divider className="models_divider" />
+      <Box className="models_inputs">
         <TextField
+          className="models_inputs--field"
           label="Brand"
           variant="outlined"
           onChange={(event) => {
             setNewModel(event.target.value);
           }}
-          sx={{ pr: 2 }}
         />
         <TextField
+          className="models_inputs--field"
           label="Year made"
           variant="outlined"
           onChange={(event) => setYearMade(event.target.value)}
-          sx={{ pr: 2 }}
         />
-        <Button onClick={handleSearch} variant="outlined">
+        <Button
+          className="models_inputs--button"
+          onClick={handleSearch}
+          variant="outlined"
+        >
           Search
         </Button>
       </Box>
       {brands === undefined || (brands.length === 0 && model !== null) ? (
         isLoading ? (
-          <CircularProgress sx={{ marginTop: "30px" }} />
+          <CircularProgress className="models_progress" />
         ) : (
-          <Typography sx={{ marginTop: "20px" }}>
+          <Typography className="models_wrong-brand">
             The vehicle brand of your choice is either incorrect or no data has
             been found.
           </Typography>
         )
       ) : isLoading ? (
-        <CircularProgress sx={{ marginTop: "30px" }} />
+        <CircularProgress className="models_progress" />
       ) : (
         model && (
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "row",
-              flexFlow: "wrap",
-              rowGap: "20px",
-              justifyContent: "center",
-              mt: "30px",
-              mb: "60px",
-            }}
-          >
+          <Box className="models_vehicle-cards">
             {brands.map(
               (
                 value: {

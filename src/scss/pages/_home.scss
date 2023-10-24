@@ -1,0 +1,55 @@
+@keyframes sliding {
+    0% {opacity: 0.05;}
+    5% {opacity: 0.2;}
+    10% {opacity: 0.5;}
+    15% {opacity: 0.7;}
+    25% {opacity: 0.9;}
+    50% {opacity: 1; right: 0;}
+    60% {opacity: 1;}
+    75% {opacity: 0.9;}
+    80% {opacity: 0.7;}
+    90% {opacity: 0.4;}
+    100% {opacity: 0.1; right: -1500px;}
+}
+
+
+.home-container{
+    width: 1400px;
+    overflow: hidden;
+
+    position: relative;
+    right: 150px;
+
+
+    
+}
+
+.home-container.MuiPaper-root{
+    background-color: transparent;
+    box-shadow: none;
+    background-image: none;
+}
+
+.slide{
+    margin: 0;
+    padding: 0;
+    width: 1230px;
+    height: 420px;
+
+    position: relative;
+    right: 1500px;
+    object-fit: cover;
+    border-radius: 8px;
+
+    animation-name: sliding;
+    animation-duration: 13.5s;
+    animation-timing-function: ease-in-out;
+
+    transition: opacity 8;
+    transition-timing-function: ease-in-out;
+
+}
+
+.slide-next{
+    display: none;
+}

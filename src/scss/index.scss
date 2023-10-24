@@ -1,0 +1,28 @@
+
+@use "./components/modelCard";
+
+//layout
+
+@use "./layout/navbar";
+@use "./layout/footer";
+
+// pages
+@use "./pages/app";
+@use "./pages/root";
+@use "./pages/home";
+@use "./pages/about";
+@use "./pages/error";
+@use "./pages/models";
+
+
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    place-items: center;
+    min-width: 320px;
+    min-height: 100vh;
+    box-sizing: border-box;
+
+}
+

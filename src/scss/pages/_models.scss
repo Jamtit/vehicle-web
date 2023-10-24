@@ -1,0 +1,47 @@
+.models{
+    width: 100%;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    padding-bottom: 12px;
+
+    &_name{
+        padding-bottom: 4px;
+    }
+
+    &_divider{
+        padding-block: 12px;
+    }
+
+    &_inputs{
+        display: flex;
+        justify-content: center;
+        margin-top: 12px;
+
+        &--field.MuiTextField-root{
+            margin-top: 10px;
+            padding-right: 12px;
+        }
+        &--button.MuiButton-root{
+            margin-top: 10px;
+        }
+    }
+
+    &_progress{
+        margin-top: 30px;
+    }
+
+    &_wrong-brand.MuiTypography-body1{
+        margin-top: 20px;
+    }
+
+    &_vehicle-cards{
+        display: flex;
+        flex-direction: row;
+        flex-flow: wrap;
+        row-gap: 20px;
+        justify-content: center;
+
+        margin-top: 30px;
+        margin-bottom: 60px
+    }
+}

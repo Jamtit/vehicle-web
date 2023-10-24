@@ -14,15 +14,19 @@ Received information example:
   | MUI
   | React-Router-DOM
   | React-Query
-  | SCSS _will be used_
+  | SCSS
 
 - Typescript
 - React (Vite.Js)
 
 ## How To Use
 
-There are only _steps_ needed
+There are only _three steps_ needed
 
 - When you load the page, go to the menu header and click on the _three lines_ in the left corner.
 - When the page will be loaded, type in your desired vehicle brand name - see the results of your search. _NOTE_ - only 15 first result will be shown.
 - If needed, you can also select the _year_ the vehicle was made for more accurate search.
+
+* TODO
+
+- Make the Error Page more interactive (colour changes on different modes, error message, button to get back to the home page...etc).

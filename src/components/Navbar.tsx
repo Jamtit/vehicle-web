@@ -36,21 +36,24 @@ export default function Navbar() {
   const { mode, toggleDarkMode } = useContext(DarkModeContext);
 
   return (
-    <AppBar>
-      <Toolbar sx={{ justifyContent: "space-between" }}>
+    <AppBar className="navbar">
+      <Toolbar className="navbar_tools">
         <Tooltip title="Menu">
           <IconButton onClick={handleClick}>
             <ListTwoToneIcon />
           </IconButton>
         </Tooltip>
-        <Menu open={open} onClose={handleClose} anchorEl={anchorElement}>
+        <Menu
+          className="navbar_tools_menu"
+          open={open}
+          onClose={handleClose}
+          anchorEl={anchorElement}
+        >
           <MenuItem>
             <Link
+              className="navbar_tools_menu--link"
               style={{
                 color: `${mode ? "white" : "black"}`,
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
               }}
               to={"/about"}
             >
@@ -60,11 +63,9 @@ export default function Navbar() {
           <Divider />
           <MenuItem>
             <Link
+              className="navbar_tools_menu--link"
               style={{
                 color: `${mode ? "white" : "black"}`,
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
               }}
               to={"/models"}
             >

@@ -85,20 +85,14 @@ function App() {
   });
 
   return (
-    <Container sx={{ width: "100vw" }}>
+    <Container className="app">
       <DarkModeContext.Provider
         value={{ mode: darkMode, toggleDarkMode: toggleMode }}
       >
         <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
           <CssBaseline />
           <QueryClientProvider client={client}>
-            <Paper
-              sx={{
-                backgroundColor: "transparent",
-                boxShadow: "none",
-                background: "none",
-              }}
-            >
+            <Paper className="app_routes">
               <RouterProvider router={router} />
             </Paper>
           </QueryClientProvider>

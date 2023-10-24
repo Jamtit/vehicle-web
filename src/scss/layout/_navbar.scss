@@ -1,0 +1,17 @@
+.navbar{
+    &_tools{
+        display: flex;
+        justify-content: space-between;
+
+        &_menu{
+            &--link{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                text-decoration: none;
+            }
+
+        }
+    }
+}

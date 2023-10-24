@@ -1,0 +1,15 @@
+.model-card{
+    padding: 12px;
+    margin-right: 20px;
+    width: 300px;
+
+    &_image{
+        max-width: 120px;
+        max-height: 120px;
+        margin-bottom: 8px;
+    }
+    
+    &_text{
+        color: white;
+    }
+}

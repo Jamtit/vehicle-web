@@ -1,0 +1,32 @@
+.about{
+    &_accordion{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+
+        &_summary{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &--icon{
+                margin-right: 10px;
+            }
+
+            &--name{
+                padding-top: 1px;
+            }
+        }
+
+        &_details{
+
+            &--divider{
+                margin-block: 20px;
+            }
+
+            &--information{
+                padding-top: 20px;
+            }
+        }
+    }
+}

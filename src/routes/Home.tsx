@@ -11,16 +11,7 @@ export default function Home() {
 
   setInterval(nextSlide, 12000);
   return (
-    <Paper
-      sx={{
-        background: "none",
-        boxShadow: "none",
-        overflow: "hidden",
-        width: "1400px",
-        position: "relative",
-        right: "150px",
-      }}
-    >
+    <Paper className="home-container">
       {data.map((data, index) => (
         <Box
           component="img"

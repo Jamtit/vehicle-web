@@ -10,28 +10,22 @@ import DirectionsCarFilledRoundedIcon from "@mui/icons-material/DirectionsCarFil
 
 export default function About() {
   return (
-    <Paper>
-      <Accordion
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <AccordionSummary>
-          <DirectionsCarFilledRoundedIcon sx={{ marginRight: "10px" }} />
-          <Typography>About Me</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Divider />
-          <Typography sx={{ marginBlock: "20px" }}>Hi There!</Typography>
-          <Typography>
-            A brand new website, called Wheels 4 Kneels, allows you to choose a
-            model of your liking and receive "just enough" information about
-            your selection.
+    <Paper className="about">
+      <Accordion className="about_accordion">
+        <AccordionSummary className="about_accordion_summary">
+          <DirectionsCarFilledRoundedIcon className="about_accordion_summary--icon" />
+          <Typography className="about_accordion_summary--name">
+            About Me
           </Typography>
-          <Typography>
+        </AccordionSummary>
+        <AccordionDetails className="about_accordion_details">
+          <Divider className="about_accordion_details--divider" />
+          <Typography className="about_accordion_details--information">
+            Hi, there!
+            <br />A brand new website, called Wheels 4 Kneels, allows you to
+            choose a model of your liking and receive "just enough" information
+            about your selection.
+            <br />
             Created by vehicle enthusiast and given to vehicle enthusiasts.
           </Typography>
         </AccordionDetails>

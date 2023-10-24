@@ -15,27 +15,22 @@ export default function ModelCard(props: Model) {
 
   return (
     <Paper
+      className="model-card"
       sx={{
-        mr: 5,
-        p: 3,
         backgroundColor: `${mode ? "background.default" : "primary.main"}`,
-        width: "300px",
-        color: "white",
       }}
     >
       <Box
+        className="model-card_image"
         component="img"
         src={logos[props.brandName?.toLocaleLowerCase() as keyof typeof logos]}
         alt="brand-logo"
-        sx={{
-          maxWidth: "120px",
-          maxHeight: "120px",
-          mb: 2,
-        }}
       />
-      <Typography>Brand: {props.brandName?.toLocaleUpperCase()}</Typography>
-      <Typography>Model: {props.model.toLocaleUpperCase()}</Typography>
-      <Typography>Year: {props.madeYear}</Typography>
+      <Box className="model-card_text">
+        <Typography>Brand: {props.brandName?.toLocaleUpperCase()}</Typography>
+        <Typography>Model: {props.model.toLocaleUpperCase()}</Typography>
+        <Typography>Year: {props.madeYear}</Typography>
+      </Box>
     </Paper>
   );
 }
