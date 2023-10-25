@@ -1,14 +1,13 @@
+@use "../utils/mixins";
+
 .about{
     &_accordion{
-        display: flex;
+        @include mixins.flexCenter();
         flex-direction: column;
         text-align: center;
-        align-items: center;
 
         &_summary{
-            display: flex;
-            justify-content: center;
-            align-items: center;
+           @include mixins.flexCenter();
             &--icon{
                 margin-right: 10px;
             }

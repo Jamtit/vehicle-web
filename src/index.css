@@ -115,9 +115,10 @@
 
 .about_accordion {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   text-align: center;
-  align-items: center;
 }
 .about_accordion_summary {
   display: flex;
@@ -152,6 +153,7 @@
 .models_inputs {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-top: 12px;
 }
 .models_inputs--field.MuiTextField-root {
@@ -160,6 +162,7 @@
 }
 .models_inputs--button.MuiButton-root {
   margin-top: 10px;
+  height: 55px;
 }
 .models_progress {
   margin-top: 30px;
@@ -169,12 +172,33 @@
 }
 .models_vehicle-cards {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: row;
   flex-flow: wrap;
   row-gap: 20px;
-  justify-content: center;
   margin-top: 30px;
   margin-bottom: 60px;
+}
+
+.error {
+  flex-direction: column;
+  width: 500px;
+  padding-inline: 16px;
+  padding-block: 20px;
+}
+.error_reaction.MuiTypography-root.MuiTypography-h3 {
+  color: #a30000;
+}
+.error_divider.MuiDivider-root {
+  margin-block: 20px;
+}
+.error_message-information {
+  font-weight: 600;
+  color: #a30000;
+}
+.error_button.MuiButtonBase-root {
+  margin-top: 20px;
 }
 
 body {

@@ -1,4 +1,8 @@
+//utils
 
+@use "./utils/mixins";
+
+// components
 @use "./components/modelCard";
 
 //layout
@@ -11,8 +15,8 @@
 @use "./pages/root";
 @use "./pages/home";
 @use "./pages/about";
-@use "./pages/error";
 @use "./pages/models";
+@use "./pages/error";
 
 
 body{

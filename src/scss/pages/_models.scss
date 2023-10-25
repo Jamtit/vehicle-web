@@ -1,3 +1,5 @@
+@use "../utils/mixins";
+
 .models{
     width: 100%;
     margin-top: 100px;
@@ -13,8 +15,7 @@
     }
 
     &_inputs{
-        display: flex;
-        justify-content: center;
+        @include mixins.flexCenter();
         margin-top: 12px;
 
         &--field.MuiTextField-root{
@@ -23,6 +24,7 @@
         }
         &--button.MuiButton-root{
             margin-top: 10px;
+            height: 55px;
         }
     }
 
@@ -35,11 +37,10 @@
     }
 
     &_vehicle-cards{
-        display: flex;
+        @include mixins.flexCenter();
         flex-direction: row;
         flex-flow: wrap;
         row-gap: 20px;
-        justify-content: center;
 
         margin-top: 30px;
         margin-bottom: 60px

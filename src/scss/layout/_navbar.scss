@@ -1,3 +1,5 @@
+@use "../utils/mixins";
+
 .navbar{
     &_tools{
         display: flex;
@@ -5,9 +7,7 @@
 
         &_menu{
             &--link{
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                @include mixins.flexCenter();
 
                 text-decoration: none;
             }

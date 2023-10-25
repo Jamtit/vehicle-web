@@ -1,0 +1,27 @@
+@use "../utils/mixins";
+
+.error{
+    flex-direction: column;
+    width: 500px;
+    padding-inline: 16px;
+    padding-block: 20px;
+
+    &_reaction.MuiTypography-root.MuiTypography-h3{
+        color: #a30000;
+    }
+
+    &_divider.MuiDivider-root{
+        margin-block: 20px;
+    }
+
+    &_message{
+        &-information{
+            font-weight: 600;
+            color: #a30000;
+        }
+    }
+
+    &_button.MuiButtonBase-root{
+        margin-top: 20px;
+    }
+}
